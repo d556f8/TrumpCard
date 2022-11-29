@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#deck {
+    display: flex;
+}
+
+.lock {
+    filter: blur(2px) grayscale(50%);
+    transition: 0.2s;
+}
+
+.card {
+    display: block;
+    width: 148px;
+    height: 230px;
+    border: 0px solid green;
+    border-radius: 10px;
+    background-image: url("./public/images/card/card-deck.png");
+    background-position-x: -294px;
+    background-position-y: -921px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.card:hover {
+    border: 2px solid chartreuse;
+    transition: all 0.1s
+}
