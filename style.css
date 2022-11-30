@@ -6,6 +6,9 @@ body {
 #deck {
     display: flex;
 }
+.eachDeck {
+    display: flex;
+}
 
 .lock {
     filter: blur(2px) grayscale(50%);
@@ -27,5 +30,5 @@ body {
 }
 .card:hover {
     border: 2px solid chartreuse;
-    transition: all 0.1s
+    transition: all 0.05s;
 }

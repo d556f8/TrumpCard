@@ -1,3 +1,4 @@
+
 class Card {
     constructor() {
         // elements
@@ -21,6 +22,8 @@ class Card {
             this.categorie = Math.floor(Math.random() * 4) + 1;
             this.num = Math.floor(Math.random() * 13) + 1;
         }
+
+
     }
 
     infoCard() {
@@ -48,7 +51,7 @@ class Card {
         let x;
         let y;
         
-        x = -148*(this.num-1);
+        x = -148 * (this.num - 1);
 
         if      (this.categorie == 1) y = 0;
         else if (this.categorie == 2) y = -230;
@@ -59,13 +62,24 @@ class Card {
         this.ele.style.backgroundPositionY = y + "px";
     }
 }
-
 const card1 = new Card();
 const card2 = new Card();
 const card3 = new Card();
 const card4 = new Card();
 const card5 = new Card();
-const deck = [ card1, card2, card3, card4, card5 ];
+const deck = [card1, card2, card3, card4, card5];
+const deckScore = Array.from({length: 10}, () => false);
+
+function tellGenealogy(deck) {
+    // isFlush?
+    let isflush = true;
+    let headCategorie = deck[0].categorie;
+
+    for (i in deck) {
+        if (deck[i].categorie != headCategorie) isflush = False;
+    }
+
+}
 
 // Deck child elements initializing
 const deckEle = document.getElementById("deck");
