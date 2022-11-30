@@ -27,20 +27,12 @@ class Card {
 
     infoCard() {
         let msg = "병과: ";
-        switch (this.categorie) {
-            case 1:
-                msg += "club";
-                break;
-            case 2:
-                msg += "diamond";
-                break;
-            case 3:
-                msg += "heart";
-                break;
-            case 4:
-                msg += "spade";
-                break;
-        }
+        
+        if      (this.categorie == 1) msg += "club";
+        else if (this.categorie == 2) msg += "diamond";
+        else if (this.categorie == 3) msg += "heart";
+        else if (this.categorie == 4) msg += "spade";
+        
         msg += ", 수: " + this.num;
 
         console.log(msg);
